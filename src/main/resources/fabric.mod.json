@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "airbender-glider",
+	"version": "${version}",
+	"name": "Airbender Glider",
+	"description": "Replaces the Elytra model with an Airbender Glider model.",
+	"authors": [
+		"Jeroen"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/airbender-glider",
+		"sources": "https://github.com/JrnJ/AirbenderGlider",
+		"issues": "https://github.com/JrnJ/AirbenderGlider/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/airbender-glider/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.jeroenj.airbenderglider.client.AirbenderGliderClient"
+		],
+		"fabric-datagen": [
+			"com.jeroenj.airbenderglider.client.AirbenderGliderDataGenerator"
+		]
+	},
+	"mixins": [
+		{
+			"config": "airbender-glider.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

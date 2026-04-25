@@ -1,0 +1,8 @@
+{
+  "advancements.end.elytra.description": "Find Airbender Glider",
+  "gamerule.disableElytraMovementCheck": "Disable Airbender Glider movement check",
+  "gamerule.minecraft.elytra_movement_check": "Do Airbender Glider movement check",
+  "item.minecraft.elytra": "Airbender Glider",
+  "stat.minecraft.aviate_one_cm": "Distance by Airbender Glider",
+  "subtitles.item.armor.equip_elytra": "Airbender Glider rustle"
+}
