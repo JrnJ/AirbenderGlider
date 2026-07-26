@@ -8,6 +8,7 @@ import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.client.model.object.equipment.ElytraModel;
 import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -114,7 +115,7 @@ public class ElytraModelMixin extends EntityModel<HumanoidRenderState> {
 
     @Inject(at = @At(value = "HEAD"), method = "setupAnim(Lnet/minecraft/client/renderer/entity/state/HumanoidRenderState;)V", cancellable = true)
     private void setupAnim(HumanoidRenderState state, CallbackInfo ci) {
-        if (state.entityType != EntityType.ARMOR_STAND) {
+        if (state.entityType != EntityTypes.ARMOR_STAND) {
             this.main.visible = state.isFallFlying;
             if (ConfigManager.configData.renderAirbenderGliderPole) {
                 this.pole.visible = !state.isFallFlying;
